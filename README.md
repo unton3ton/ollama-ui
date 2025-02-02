@@ -1,16 +1,19 @@
-> run-locally.sh
+> nano run-locally.sh
 
 ```bash
+...
 # host local webserver
 python3 -m http.server --bind 0.0.0.0 "$PORT"
 ```
  
-cat /etc/systemd/system/ollama.service
+> nano /etc/systemd/system/ollama.service
  
-> ...
-> Environment="OLLAMA_HOST=0.0.0.0"
-> Environment="OLLAMA_HOST=http://192.___.1.121:8000"
-> ...
+```bash
+...
+Environment="OLLAMA_HOST=0.0.0.0"
+Environment="OLLAMA_HOST=http://192.___.1.121:8000"
+...
+```
  
 in browser line on another local web PC: http://192.___.1.121:8000
 
